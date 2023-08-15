@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: eight-ball
+Version: 3.0.3
+Summary: 8ball response generator.
+Home-page: https://github.com/Cryptex-github/eight_ball
+Author: cryptex
+License: Apache-2.0
+Keywords: sync,8ball
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+# eight_ball
+8ball response generator.
+Example:
+```py
+import eight_ball
+ball = eight_ball.ball()
+print(ball.response("is eight_ball a good ball"))
+```
+Discord.py bot implement
+
+```py
+"""
+Put the ball object under the bot object
+"""
+@bot.command()
+async def ball(ctx, *, question):
+ await ctx.send(bot.ball.response(question)
+```
+
+
