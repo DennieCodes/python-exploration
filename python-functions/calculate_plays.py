@@ -49,8 +49,6 @@ def calculate_plays(num_quarters):
     machine_play_count = [ 0, 0, 0 ]
     next_machine = 0
 
-    inf_count = 0 # to avoid infinite loop
-
     while quarters > 0:
         play_count += 1
         quarters -= 1
@@ -73,13 +71,6 @@ def calculate_plays(num_quarters):
                 quarters += 7
                 machine_play_count[2] = 0
             next_machine = 0
-
-        # To stop infinite loop
-        if inf_count > 3300:
-            break
-        inf_count += 1
-        # block
-
     return play_count
 
 dataset = [ 1000, 100, 10, 30, 500 ]
