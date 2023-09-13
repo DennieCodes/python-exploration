@@ -61,3 +61,9 @@ heyB = []
 
 result = comp(heyA, heyB)
 print(result)
+
+# Great Codewars solution
+# def comp(a,b):
+#     if a is None or b is None or len(a) != len(b):
+#         return False
+#     return sorted([i**2 for i in a]) == sorted(b)
