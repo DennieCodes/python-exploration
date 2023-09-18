@@ -49,4 +49,8 @@ def to_camel_case(text):
         return ''
     return removed[0]+ ''.join([x.capitalize() for x in removed[1:]])
 
+also
+
+def to_camel_case(text):
+    return text[:1] + text.title()[1:].replace('_', '').replace('-', '')
 '''
