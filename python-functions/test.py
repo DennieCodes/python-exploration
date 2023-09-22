@@ -28,13 +28,36 @@
 
 # result = calculate_prefix_sums([1, 2, 3, 4], 2)
 
-def pairwise_sums(values):
-    sums = []
-    loop_limit = len(values) - 1
-    for index in range(loop_limit):
-        next_index = index + 1
-        sum = values[index] + values[next_index]
-        sums.append(sum)
-    return sums
+# def pairwise_sums(values):
+#     sums = []
+#     loop_limit = len(values) - 1
+#     for index in range(loop_limit):
+#         next_index = index + 1
+#         sum = values[index] + values[next_index]
+#         sums.append(sum)
+#     return sums
 
-print(pairwise_sums([1]))
+# print(pairwise_sums([1]))
+
+# print(list(enumerate(['A', 'B', 'C'])))
+
+class Mammal:
+    def __init__(self, temperature, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.temperature = temperature
+
+class Flyer:
+    altitude = 0
+
+    def flap(self):
+        self.altitude += 10
+
+    def dive(self):
+        self.altitude -= 10
+
+class Bat(Mammal, Flyer):
+    pass
+
+# bat = Bat({ "temperature": 90})
+bat = Bat(90)
+print(bat.temperature)
