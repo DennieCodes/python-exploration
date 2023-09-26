@@ -31,18 +31,32 @@ print(result) # --> [
 
 #     return result
 
+# def only_items_with(items, filters):
+#     result = []
+#     for dic in items:
+#         for key,val in dic.items():
+#             if (key,val) in filters.items():
+#                 result.append(dic)
+#                 break
+
+#     return result
+
 def only_items_with(items, filters):
     result = []
 
-    for dict in items:
-          for item in dict:
-               if item in filters:
-                    result.append(dict)
-                    break
+#     for item in items:
+#         for (key, value) in item.items():
+#             if (key, value) in filters.items():
+#                 result.append(item)
 
-    # loop over the things, get the things you want
+    # return result
 
-    return result
+    for item in items:
+        sub_dict = {key:value for key,value in item.items() if (key, value) in filters.items()}
+        if sub_dict:
+            result.append(item)
+
+        return result
 
 items = [
     {"color":"blue", "size":"small"},
